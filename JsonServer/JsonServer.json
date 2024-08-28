@@ -1,0 +1,102 @@
+[
+    {
+      "itemId": 1,
+      "name": "Item 1",
+      "available": true,
+      "createdAt": "2023-08-27T12:34:56.789Z",
+      "updatedAt": "2023-08-27T12:34:56.789Z",
+      "usedBy": {
+        "name": "User 42"
+      }
+    },
+    {
+      "itemId": 2,
+      "name": "Item 2",
+      "available": false,
+      "createdAt": "2023-08-27T12:34:56.790Z",
+      "updatedAt": "2023-08-27T12:34:56.790Z",
+      "usedBy": {
+        "name": "User 91"
+      }
+    },
+    {
+      "itemId": 3,
+      "name": "Item 3",
+      "available": true,
+      "createdAt": "2023-08-27T12:34:56.791Z",
+      "updatedAt": "2023-08-27T12:34:56.791Z",
+      "usedBy": {
+        "name": "User 15"
+      }
+    },
+    {
+      "itemId": 4,
+      "name": "Item 4",
+      "available": false,
+      "createdAt": "2023-08-27T12:34:56.792Z",
+      "updatedAt": "2023-08-27T12:34:56.792Z",
+      "usedBy": {
+        "name": "User 67"
+      }
+    },
+    {
+      "itemId": 5,
+      "name": "Item 5",
+      "available": true,
+      "createdAt": "2023-08-27T12:34:56.793Z",
+      "updatedAt": "2023-08-27T12:34:56.793Z",
+      "usedBy": {
+        "name": "User 82"
+      }
+    },
+    {
+      "itemId": 6,
+      "name": "Item 6",
+      "available": false,
+      "createdAt": "2023-08-27T12:34:56.794Z",
+      "updatedAt": "2023-08-27T12:34:56.794Z",
+      "usedBy": {
+        "name": "User 31"
+      }
+    },
+    {
+      "itemId": 7,
+      "name": "Item 7",
+      "available": true,
+      "createdAt": "2023-08-27T12:34:56.795Z",
+      "updatedAt": "2023-08-27T12:34:56.795Z",
+      "usedBy": {
+        "name": "User 49"
+      }
+    },
+    {
+      "itemId": 8,
+      "name": "Item 8",
+      "available": false,
+      "createdAt": "2023-08-27T12:34:56.796Z",
+      "updatedAt": "2023-08-27T12:34:56.796Z",
+      "usedBy": {
+        "name": "User 76"
+      }
+    },
+    {
+      "itemId": 9,
+      "name": "Item 9",
+      "available": true,
+      "createdAt": "2023-08-27T12:34:56.797Z",
+      "updatedAt": "2023-08-27T12:34:56.797Z",
+      "usedBy": {
+        "name": "User 28"
+      }
+    },
+    {
+      "itemId": 10,
+      "name": "Item 10",
+      "available": false,
+      "createdAt": "2023-08-27T12:34:56.798Z",
+      "updatedAt": "2023-08-27T12:34:56.798Z",
+      "usedBy": {
+        "name": "User 95"
+      }
+    }
+  ]
