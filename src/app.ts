@@ -1,11 +1,15 @@
-import * as http from 'http';
+import express, { NextFunction, Request, Response } from 'express'
+import { db } from './models';
 
-const port = 3000;
+const app = express();
 
-const server = http.createServer((req: http.IncomingMessage, res: http.ServerResponse) => {
-    res.end('Hello World');
+
+app.use((req: Request, res: Response, next: NextFunction) => {
+    res.status(404).send("This is not the URL you are looking for!")
+})
+
+db.sync().then(() => {
+    console.info("connected to the database!")
 });
 
-server.listen(port, () => {
-    console.log(`Server listening on port ${port}`)
-})
+app.listen(3000);
