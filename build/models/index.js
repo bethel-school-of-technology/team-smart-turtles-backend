@@ -2,7 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.db = void 0;
 const sequelize_1 = require("sequelize");
-const inventory_1 = require("./inventory");
+const inventrua_1 = require("./inventrua");
+const user_1 = require("./user");
 const dbName = 'Inventory';
 const username = 'root';
 const password = '';
@@ -11,41 +12,7 @@ const sequelize = new sequelize_1.Sequelize(dbName, username, password, {
     port: 3306,
     dialect: 'mysql'
 });
-(0, inventory_1.ItemFactory)(sequelize);
+(0, inventrua_1.ItemFactory)(sequelize);
+(0, user_1.UserFactory)(sequelize);
+(0, inventrua_1.AssociateUserItem)();
 exports.db = sequelize;
-// import { Sequelize } from "sequelize";
-// import { ItemFactory } from "./inventory";
-// const dbName = 'Inventory';
-// const username = 'root';
-// const password= '';
-// // Change this line:
-// const sequelize = new Sequelize(dbName, username, password, {
-//     host: 'localhost',
-//     port: 3306,
-//     dialect: 'mysql',
-//     pool: {
-//         max: 5,
-//         min: 0,
-//         idle: 3600
-//     },
-//     operatorsAliases: {
-//         $eq: '=',
-//         $neq: '<>',
-//         $like: 'LIKE',
-//         $notLike: 'NOT LIKE',
-//         $gt: '> ',
-//         $lt: '< ',
-//         $gte: '>=',
-//         $lte: '<=',
-//         $between: 'BETWEEN',
-//         $notBetween: 'NOT BETWEEN',
-//         $in: 'IN',
-//         $notIn: 'NOT IN',
-//         $or: 'OR',
-//         $and: 'AND',
-//         $not: 'NOT'
-//     },
-//     logging: false // Disable logging for production
-// });
-// ItemFactory(sequelize);
-// export const db = sequelize;
