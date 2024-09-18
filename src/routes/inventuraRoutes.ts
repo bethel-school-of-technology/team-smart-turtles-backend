@@ -9,7 +9,7 @@ router.post('/create', createItem);
 
 router.get('/:itemId', getItem);
 
-router.put('/:itemId', updateItem);
+router.put('/update/:itemId', updateItem);
 
 router.delete('/ADMIN_DELETE/:itemId', deleteItem);
 
