@@ -5,6 +5,7 @@ import { User } from "./user";
 export class Item extends Model<InferAttributes<Item>, InferCreationAttributes<Item>>{
     declare itemId: number;
     declare name: string;
+    declare catagory: string;
     declare createdAt: Date;
     declare updatedAt: Date;
     declare available: boolean;
@@ -20,6 +21,10 @@ export function ItemFactory(sequelize: Sequelize) {
         autoIncrement: true,
       },
       name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      catagory: {
         type: DataTypes.STRING,
         allowNull: false,
       },

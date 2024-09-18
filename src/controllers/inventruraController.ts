@@ -19,7 +19,7 @@ export const createItem: RequestHandler = async (req, res, next) => {
     let newMessage: Item = req.body;
     newMessage.userId = user.userId
 
-    if (newMessage.name && newMessage.available) {
+    if (newMessage.name && newMessage.available && newMessage.catagory) {
         let created = await Item.create(newMessage);
         res.status(201).json(created);
     } else {

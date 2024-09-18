@@ -16,6 +16,10 @@ function ItemFactory(sequelize) {
             type: sequelize_1.DataTypes.STRING,
             allowNull: false,
         },
+        catagory: {
+            type: sequelize_1.DataTypes.STRING,
+            allowNull: false,
+        },
         createdAt: {
             type: sequelize_1.DataTypes.DATE,
             defaultValue: sequelize_1.DataTypes.NOW,

@@ -4,7 +4,7 @@ import { createUser, getAllUsers, getUser, loginUser } from '../controllers/user
 const router = Router();
 
 router.get('/ADMIN-GET', getAllUsers)
-router.post('/', createUser);
+router.post('/register', createUser);
 router.post('/login', loginUser);
 router.get('/:id', getUser);
 

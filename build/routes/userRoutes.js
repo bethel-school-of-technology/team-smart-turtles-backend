@@ -4,7 +4,7 @@ const express_1 = require("express");
 const userController_1 = require("../controllers/userController");
 const router = (0, express_1.Router)();
 router.get('/ADMIN-GET', userController_1.getAllUsers);
-router.post('/', userController_1.createUser);
+router.post('/register', userController_1.createUser);
 router.post('/login', userController_1.loginUser);
 router.get('/:id', userController_1.getUser);
 exports.default = router;

@@ -15,7 +15,7 @@ const createItem = async (req, res, next) => {
     }
     let newMessage = req.body;
     newMessage.userId = user.userId;
-    if (newMessage.name && newMessage.available) {
+    if (newMessage.name && newMessage.available && newMessage.catagory) {
         let created = await inventrua_1.Item.create(newMessage);
         res.status(201).json(created);
     }
