@@ -28,10 +28,10 @@ function ItemFactory(sequelize) {
             type: sequelize_1.DataTypes.BOOLEAN,
             defaultValue: true,
         },
-        // usedBy: {
-        //   type: DataTypes.STRING,
-        //   allowNull: true,
-        // },
+        userId: {
+            type: sequelize_1.DataTypes.INTEGER,
+            allowNull: true,
+        },
     }, {
         tableName: 'Inventory',
         freezeTableName: true,

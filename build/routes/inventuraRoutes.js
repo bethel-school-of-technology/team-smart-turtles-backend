@@ -6,6 +6,6 @@ const router = (0, express_1.Router)();
 router.get('/', inventruraController_1.getAllItems);
 router.post('/create', inventruraController_1.createItem);
 router.get('/:itemId', inventruraController_1.getItem);
-router.put('/update/:itemId', inventruraController_1.updateItem);
+router.put('/:itemId', inventruraController_1.updateItem);
 router.delete('/ADMIN_DELETE/:itemId', inventruraController_1.deleteItem);
 exports.default = router;

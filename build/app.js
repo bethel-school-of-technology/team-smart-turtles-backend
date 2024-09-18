@@ -12,9 +12,11 @@ const app = (0, express_1.default)();
 app.use((0, morgan_1.default)('dev'));
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
+const cors = require('cors');
+app.use(cors());
 // routes
 app.use('/api/items', inventuraRoutes_1.default);
-app.use('/user', userRoutes_1.default);
+app.use('/api/user', userRoutes_1.default);
 app.use((req, res, next) => {
     res.status(404).end();
 });

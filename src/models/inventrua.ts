@@ -8,6 +8,7 @@ export class Item extends Model<InferAttributes<Item>, InferCreationAttributes<I
     declare createdAt: Date;
     declare updatedAt: Date;
     declare available: boolean;
+    declare userId: number;
     // declare usedBy: string;
 
 }
@@ -34,10 +35,10 @@ export function ItemFactory(sequelize: Sequelize) {
         type: DataTypes.BOOLEAN,
         defaultValue: true,
       },
-      // usedBy: {
-      //   type: DataTypes.STRING,
-      //   allowNull: true,
-      // },
+      userId: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+      },
     }, {
         tableName: 'Inventory',
         freezeTableName: true,
