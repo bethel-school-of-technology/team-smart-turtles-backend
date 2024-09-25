@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Item = void 0;
-exports.ItemFactory = ItemFactory;
+exports.ItemFactory = exports.Item = void 0;
 const sequelize_1 = require("sequelize");
 class Item extends sequelize_1.Model {
 }
@@ -34,3 +33,4 @@ function ItemFactory(sequelize) {
         sequelize
     });
 }
+exports.ItemFactory = ItemFactory;

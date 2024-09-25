@@ -9,6 +9,7 @@ export class Item extends Model<InferAttributes<Item>, InferCreationAttributes<I
     declare createdAt: Date;
     declare updatedAt: Date;
     declare available: boolean;
+    declare itemImg: string;
     declare userId: number;
     // declare usedBy: string;
 
@@ -39,6 +40,10 @@ export function ItemFactory(sequelize: Sequelize) {
       available: {
         type: DataTypes.BOOLEAN,
         defaultValue: true,
+      },
+      itemImg: {
+        type: DataTypes.STRING,
+        allowNull: false,
       },
       userId: {
         type: DataTypes.INTEGER,

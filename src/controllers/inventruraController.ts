@@ -19,7 +19,7 @@ export const createItem: RequestHandler = async (req, res, next) => {
     let newMessage: Item = req.body;
     newMessage.userId = user.userId
 
-    if (newMessage.name && newMessage.available && newMessage.catagory) {
+    if (newMessage.name && newMessage.available && newMessage.catagory && newMessage.itemImg) {
         let created = await Item.create(newMessage);
         res.status(201).json(created);
     } else {
@@ -85,4 +85,8 @@ export const deleteItem: RequestHandler = async (req, res, next) => {
     else {
         res.status(404).json();
     }
+}
+
+export const upload: RequestHandler = async (req, res, next) => {
+    
 }

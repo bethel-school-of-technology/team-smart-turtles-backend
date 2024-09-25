@@ -32,6 +32,10 @@ function ItemFactory(sequelize) {
             type: sequelize_1.DataTypes.BOOLEAN,
             defaultValue: true,
         },
+        itemImg: {
+            type: sequelize_1.DataTypes.STRING,
+            allowNull: false,
+        },
         userId: {
             type: sequelize_1.DataTypes.INTEGER,
             allowNull: true,

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.deleteItem = exports.updateItem = exports.getItem = exports.createItem = exports.getAllItems = void 0;
+exports.upload = exports.deleteItem = exports.updateItem = exports.getItem = exports.createItem = exports.getAllItems = void 0;
 const inventrua_1 = require("../models/inventrua");
 const authService_1 = require("../services/authService");
 const getAllItems = async (req, res, next) => {
@@ -15,7 +15,7 @@ const createItem = async (req, res, next) => {
     }
     let newMessage = req.body;
     newMessage.userId = user.userId;
-    if (newMessage.name && newMessage.available && newMessage.catagory) {
+    if (newMessage.name && newMessage.available && newMessage.catagory && newMessage.itemImg) {
         let created = await inventrua_1.Item.create(newMessage);
         res.status(201).json(created);
     }
@@ -69,3 +69,6 @@ const deleteItem = async (req, res, next) => {
     }
 };
 exports.deleteItem = deleteItem;
+const upload = async (req, res, next) => {
+};
+exports.upload = upload;
