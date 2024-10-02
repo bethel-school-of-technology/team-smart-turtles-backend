@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const inventuraController_1 = require("./inventuraController");
+const router = (0, express_1.Router)();
+router.get('/', inventuraController_1.allItems);
+router.post('/ADMIN-CREATE', inventuraController_1.addItem);
+router.put('/:itemId', inventuraController_1.updateItem);
+router.delete('/ADMIN/:itemId', inventuraController_1.deleteItem);
+exports.default = router;
